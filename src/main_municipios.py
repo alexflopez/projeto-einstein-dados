@@ -3,7 +3,7 @@ import os
 from sqlalchemy import create_engine
 
 # Caminho exato para o arquivo de municípios na pasta files
-PATH_MUNICIPIOS = r'D:\Documentos\projeto-einstein-dados\projeto-einstein-dados\files\RELATORIO_DTB_BRASIL_MUNICIPIO.CSV'
+PATH_MUNICIPIOS = r'D:\Documentos\projeto-einstein-dados\projeto-einstein-dados\data\municipios\RELATORIO_DTB_BRASIL_MUNICIPIO.CSV'
 
 def to_camel_case(col_name):
     """Converte uma string para camelCase."""
