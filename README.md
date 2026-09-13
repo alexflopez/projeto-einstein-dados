@@ -13,14 +13,14 @@ graph TD
         A2[CSV IBGE Municípios] --> B2[main_municipios.py]
     end
 
-    subgraph Camada Bronze (Dados Crus / Strings)
+    subgraph Camada_Bronze ["Camada Bronze (Dados Crus / Strings)"]
         B1 -->|Append + Idempotência| C1[(bronze_sindrome_gripal)]
         B1 -->|Log de Controle| C2[(control_processed_files)]
         C2 -.->|Verifica Histórico| B1
         B2 -->|Full Refresh / Replace| C3[(dim_municipios)]
     end
 
-    subgraph Camada Prata e Ouro
+    subgraph Camada_Prata_e_Ouro ["Camada Prata e Ouro"]
         C1 --> D1[Camada Prata <br> - Limpeza, tipagem e padronização]
         C3 --> D1
         D1 --> D2[Camada Ouro <br> - Modelagem Analítica Fato/Dimensão]
