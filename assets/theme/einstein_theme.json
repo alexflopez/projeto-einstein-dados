@@ -13,22 +13,22 @@
   "tableAccent": "#00539A",
   "textClasses": {
     "callout": {
-      "fontFamily": "Montserrat",
+      "fontFace": "Montserrat",
       "fontSize": 28,
       "color": "#00539A"
     },
     "title": {
-      "fontFamily": "Montserrat",
+      "fontFace": "Montserrat",
       "fontSize": 14,
       "color": "#112244"
     },
     "header": {
-      "fontFamily": "Montserrat",
+      "fontFace": "Montserrat",
       "fontSize": 12,
       "color": "#00539A"
     },
     "label": {
-      "fontFamily": "Montserrat",
+      "fontFace": "Montserrat",
       "fontSize": 10,
       "color": "#112244"
     }
