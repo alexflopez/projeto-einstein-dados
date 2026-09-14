@@ -1,0 +1,23 @@
+{
+  "name": "Einstein Theme",
+  "dataColors": [
+    "#00539A",
+    "#0096D2",
+    "#00DBFF",
+    "#3373AD",
+    "#66B3E0",
+    "#112244"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#00539A",
+  "tableAccent": "#00539A",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "general": [{
+            "fontFamily": "Montserrat, Arial, sans-serif"
+        }]
+      }
+    }
+  }
+}
