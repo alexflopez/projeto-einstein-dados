@@ -11,13 +11,26 @@
   "background": "#FFFFFF",
   "foreground": "#00539A",
   "tableAccent": "#00539A",
-  "visualStyles": {
-    "*": {
-      "*": {
-        "general": [{
-            "fontFamily": "Montserrat, Arial, sans-serif"
-        }]
-      }
+  "textClasses": {
+    "callout": {
+      "fontFamily": "Montserrat",
+      "fontSize": 28,
+      "color": "#00539A"
+    },
+    "title": {
+      "fontFamily": "Montserrat",
+      "fontSize": 14,
+      "color": "#112244"
+    },
+    "header": {
+      "fontFamily": "Montserrat",
+      "fontSize": 12,
+      "color": "#00539A"
+    },
+    "label": {
+      "fontFamily": "Montserrat",
+      "fontSize": 10,
+      "color": "#112244"
     }
   }
 }
