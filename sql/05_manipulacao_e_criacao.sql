@@ -62,11 +62,11 @@ GO
 
 
 --------------------------------------------------------------------------------
--- Diagnóstico: Visualizar valores de estado IBGE e notificação
+-- Diagnóstico: Visualizar quais valores de estado estão nulos, vazios ou indefinidos
 --------------------------------------------------------------------------------
 SELECT DISTINCT
     estadoIBGE,
-	estadoNotificacaoIBGE 
+    estadoNotificacaoIBGE  
 FROM dbo.prata_sindrome_gripal;
 GO
 
@@ -75,18 +75,17 @@ GO
 -- 3.c.ii: Implementa um comando que modifique a UF que está indefinida, vazia ou nula para 'ND'
 --------------------------------------------------------------------------------
 UPDATE dbo.prata_sindrome_gripal
-SET estado = 'ND'
-WHERE estado IS NULL 
-   OR LTRIM(RTRIM(estado)) = '' 
-   OR UPPER(LTRIM(RTRIM(estado))) IN ('NULL', 'UNDEFINED', 'INDEFINIDO', 'NÃO DEFINIDO', 'NAO DEFINIDO');
+SET estadoIBGE = 'ND',
+    estadoNotificacaoIBGE = 'ND'
+WHERE (estadoIBGE IS NULL OR LTRIM(RTRIM(estadoIBGE)) = '' OR UPPER(LTRIM(RTRIM(estadoIBGE))) IN ('NULL', 'UNDEFINED', 'INDEFINIDO', 'NÃO DEFINIDO', 'NAO DEFINIDO'))
+   OR (estadoNotificacaoIBGE IS NULL OR LTRIM(RTRIM(estadoNotificacaoIBGE)) = '' OR UPPER(LTRIM(RTRIM(estadoNotificacaoIBGE))) IN ('NULL', 'UNDEFINED', 'INDEFINIDO', 'NÃO DEFINIDO', 'NAO DEFINIDO'));
 GO
 
 
 --------------------------------------------------------------------------------
 -- 3.c.iii: Implementa um comando que apague 10 registros da UF 'ND'
--- (Utilizamos TOP (10) no SQL Server para garantir que apague exatamente 10 linhas com segurança)
 --------------------------------------------------------------------------------
 DELETE TOP (10) 
 FROM dbo.prata_sindrome_gripal
-WHERE estado = 'ND';
+WHERE estadoIBGE = 'ND' OR estadoNotificacaoIBGE = 'ND';
 GO
