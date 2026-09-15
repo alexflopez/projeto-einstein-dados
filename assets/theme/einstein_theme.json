@@ -1,0 +1,36 @@
+{
+  "name": "Einstein Theme",
+  "dataColors": [
+    "#00539A",
+    "#0096D2",
+    "#00DBFF",
+    "#3373AD",
+    "#66B3E0",
+    "#112244"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#00539A",
+  "tableAccent": "#00539A",
+  "textClasses": {
+    "callout": {
+      "fontFace": "Montserrat",
+      "fontSize": 28,
+      "color": "#00539A"
+    },
+    "title": {
+      "fontFace": "Montserrat",
+      "fontSize": 14,
+      "color": "#112244"
+    },
+    "header": {
+      "fontFace": "Montserrat",
+      "fontSize": 12,
+      "color": "#00539A"
+    },
+    "label": {
+      "fontFace": "Montserrat",
+      "fontSize": 10,
+      "color": "#112244"
+    }
+  }
+}
